@@ -1,22 +1,33 @@
 namespace Planets.Views;
-
 public partial class PlanetsPage : ContentPage
 {
-    private const uint AnimationDuration = 800u;
     public PlanetsPage()
-	{
-		InitializeComponent();
-	}
-    async void GridArea_Tapped(System.Object sender, System.EventArgs e)
     {
-        await CloseMenu();
+        InitializeComponent();
     }
 
-    private async Task CloseMenu()
+    protected override void OnAppearing()
     {
-        //close menu and show again main content
-        _ = MainContentGrid.FadeTo(1, AnimationDuration);
-        _ = MainContentGrid.ScaleTo(1, AnimationDuration);
-        await MainContentGrid.TranslateTo(0, 0, AnimationDuration, Easing.CubicIn);
+        base.OnAppearing();
+
+        lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
+        lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
+    }
+
+    async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    {
+
+    }
+
+
+    async void ApiPic_Clicked(System.Object sender, System.EventArgs e)
+    {
+
+    }
+
+
+    async void GridArea_Tapped(System.Object sender, System.EventArgs e)
+    {
+
     }
 }

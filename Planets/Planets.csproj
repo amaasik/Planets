@@ -49,7 +49,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Resources\Fonts\" />
-	  <Folder Include="Resources\Images\" />
 	</ItemGroup>
 
 	<ItemGroup>
