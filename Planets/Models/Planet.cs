@@ -7,7 +7,7 @@ using System.Globalization;
 
 namespace Planets.Models
 {
-    class Planet
+    public class Planet
     {
         public string Name { get; set; }
         public string Subtitle { get; set; }

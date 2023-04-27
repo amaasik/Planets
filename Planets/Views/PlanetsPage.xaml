@@ -144,11 +144,11 @@
                     <!--Search box-->
                     <Border
                         Padding="12,4"
-                        BackgroundColor="#33CCCC"
+                        BackgroundColor="#33CCCCCC"
                         Stroke="{StaticResource BorderColor}"
                         HorizontalOptions="Fill"
                         Margin="0,0,24,0"
-                        HeightRequest="48">
+                        HeightRequest="30">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="6" />
                         </Border.StrokeShape>
@@ -190,7 +190,7 @@
 
                     <CollectionView
                         x:Name="lstPopularPlanets"
-                        HeightRequest="280"
+                        HeightRequest="200"
                         SelectionMode="Single"
                         SelectionChanged="Planets_SelectionChanged">
 
@@ -320,7 +320,7 @@
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
                 Margin="0,0,0,20"
-                HeightRequest="90"
+                HeightRequest="65"
                 Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="2">

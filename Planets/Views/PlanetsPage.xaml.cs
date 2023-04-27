@@ -16,7 +16,7 @@ public partial class PlanetsPage : ContentPage
 
     async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
     {
-
+        await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
     }
 
 
@@ -28,6 +28,6 @@ public partial class PlanetsPage : ContentPage
 
     async void GridArea_Tapped(System.Object sender, System.EventArgs e)
     {
-
+        
     }
 }
